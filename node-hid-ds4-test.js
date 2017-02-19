@@ -51,7 +51,7 @@ function setRumbleLed(rumbleL, rumbleR, ledR,ledG,ledB)
     buf[77] = (crc32 & 0xff000000) >> 24;
     // end crc32 calc
     
-    console.log("output buf:","len:",buf.length, "vals:",buf.join(','));
+    console.log("outbuf:","len:",buf.length, "vals:",buf.join(','));
     device.write(buf);
 
 }

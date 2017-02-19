@@ -24,5 +24,7 @@ To try it out:
 Issues:
 - Once the controller is updated with an Output Report to update LED & rumble,
 it stops streaming Input Reports for reportId 1.  Unclear how to re-enable.
+This is not a bug in node-hid, as you can kill & restart the program without
+resetting the controller and the program will continue to update the LED.
 
 
