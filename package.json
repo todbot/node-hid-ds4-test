@@ -1,0 +1,24 @@
+{
+  "name": "node-hid-ds4-test",
+  "version": "1.0.0",
+  "description": "Testing Playstation DualShock4 controller with node-hid",
+  "main": "node-hid-ds4-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/todbot/node-hid-ds4-test.git"
+  },
+  "keywords": [],
+  "author": "Tod Kurt <todbotdotcom@gmail.com> (https://github.com/todbot)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/todbot/node-hid-ds4-test/issues"
+  },
+  "homepage": "https://github.com/todbot/node-hid-ds4-test#readme",
+  "dependencies": {
+    "crc": "^3.4.4",
+    "node-hid": "^0.5.4"
+  }
+}
