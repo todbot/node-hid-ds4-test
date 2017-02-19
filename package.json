@@ -4,6 +4,7 @@
   "description": "Testing Playstation DualShock4 controller with node-hid",
   "main": "node-hid-ds4-test.js",
   "scripts": {
+    "start": "node ./node-hid-ds4-test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

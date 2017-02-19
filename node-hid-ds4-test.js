@@ -22,7 +22,7 @@ function setRumbleLed(rumbleL, rumbleR, ledR,ledG,ledB)
 {
     var buf = [
         0x11, // reportId
-        0xc0, 0, 0xf0,  0,  0,  rumbleL,  rumbleR, ledR, ledG, ledB,
+        0xc0, 0, 0x0f,  0,  0,  rumbleL,  rumbleR, ledR, ledG, ledB,
         0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
         0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
         0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
@@ -47,9 +47,10 @@ function setRumbleLed(rumbleL, rumbleR, ledR,ledG,ledB)
 
 device.gotData = function (err, data) {
     console.log('got ds4 data', data);
-    if( (data[5] & 0x10) ) {
+    // data[5] contains square button state at 0x10 bit
+    if( (data[5] & 0x10) ) { 
         console.log("square pressed!");
-        setRumbleLed(255,255, 255,0,0);
+        setRumbleLed(120,120, 255,0,255); // half rumbles + purple
         console.log("rumble done");
     }
     this.read(this.gotData.bind(this));
